@@ -32,7 +32,7 @@ const Title: React.FC<TitleProps> = ({ layer, name, position, ...props }) => {
         anchorY="middle"
         {...TEXT_PROPS}
       >
-        {"KANOPY \n LABS"}
+        {"KANOPY \n   LABS"}
       </Text>
     </group>
   );
