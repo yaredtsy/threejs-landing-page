@@ -9,7 +9,7 @@ interface TitleProps {
 }
 
 const TEXT_PROPS = {
-  fontSize: 2.5,
+  fontSize: 2.25,
   font: "https://fonts.gstatic.com/s/syncopate/v12/pe0pMIuPIYBCpEV5eFdKvtKqBP5p.woff",
 };
 
