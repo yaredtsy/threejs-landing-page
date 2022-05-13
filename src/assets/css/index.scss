@@ -32,6 +32,28 @@ body,
   padding: 0;
 }
 
+.header_container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  .header_scroll_content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    text-align: center;
+  }
+}
+
+.container {
+  background: black;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 /* Page Loader */
 .js {
   .loading::before,
