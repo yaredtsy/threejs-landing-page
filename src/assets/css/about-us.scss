@@ -1,5 +1,18 @@
 .about-us {
   display: flex;
+
   justify-content: center;
   text-align: center;
+
+  .content {
+    width: 50%;
+    top: 25%;
+  }
+  .title {
+    font-size: 5.25rem;
+  }
+}
+
+.phone_case {
+  max-height: 100vh;
 }
