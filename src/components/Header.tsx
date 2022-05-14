@@ -4,6 +4,7 @@ import useSlerp from "hooks/use-slerp";
 import React from "react";
 
 import * as THREE from "three";
+import { CubeCamera } from "three";
 import Mirrors from "./Mirrors";
 import Title from "./Title";
 import TitleCopies from "./TitleCopies";

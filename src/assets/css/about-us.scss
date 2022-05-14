@@ -6,7 +6,6 @@
 
   .content {
     width: 35%;
-    top: 25%;
   }
   .title {
     font-size: 5.25rem;
@@ -14,5 +13,29 @@
 }
 
 .phone_case {
-  max-height: 100vh;
+  min-height: 100vh;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-us {
+    .content {
+      width: 60%;
+    }
+    .title {
+      font-size: 4.25rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-us {
+    .content {
+      width: 90%;
+    }
+    .title {
+      font-size: 3.25rem;
+    }
+  }
 }

@@ -17,6 +17,7 @@ import {
   Sticky,
   ZoomIn,
   ZoomOut,
+  StickyIn,
 } from "react-scroll-motion";
 import "assets/css/about-us.scss";
 import phoneCase from "assets/images/phone-case.webp";
@@ -61,15 +62,15 @@ function App() {
           )}
         >
           <div className="container">
-            <picture className="phone_case">
+            <picture>
               <source srcSet={phoneCase} type="image/webp" />
-              <img src={phoneCase} alt="" />
+              <img src={phoneCase} alt="" className="phone_case" />
             </picture>
           </div>
         </Animator>
       </ScrollPage>
       <ScrollPage page={2}>
-        <Animator animation={batch(Fade(0, 0.75), Move(), Sticky())}>
+        <Animator animation={batch(Fade(0, 0.75), Move(), Sticky(50, 40))}>
           <div className="container">
             <Animator
               animation={batch(ZoomIn(0.7, 1), FadeIn(0, 1), FadeOut(1, 0.5))}
