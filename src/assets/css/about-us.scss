@@ -1,3 +1,11 @@
+$color-bg: #1f1f38;
+$color-variant: #2c2c6c;
+$color-primary: #4dbffd;
+$color-primary-variant: rgba(77, 181.255, 0.4);
+$color-white: #fff;
+$color-light: rgba(255, 255, 255, 0.6);
+$transition: all 400ms ease;
+
 .about-us {
   display: flex;
 
@@ -25,6 +33,50 @@
     object-fit: cover;
   }
 }
+
+.about__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3px;
+}
+
+.about__card {
+  background: $color-variant;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: $transition;
+
+  &:hover {
+    background: transparent;
+    border-color: $color-primary-variant;
+    cursor: default;
+  }
+
+  h5 {
+    font-size: 0.9rem;
+  }
+  small {
+    font-size: 0.7rem;
+    color: $color-light;
+  }
+}
+
+.about__icon {
+  color: $color-primary;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.about__content {
+  p {
+    margin: 2rem 0 2.6rem;
+    color: $color-light;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .about-us {
     .content {

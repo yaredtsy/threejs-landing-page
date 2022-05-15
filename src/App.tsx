@@ -3,6 +3,9 @@ import { Canvas } from "@react-three/fiber";
 import Header from "components/Header";
 import { Suspense } from "react";
 import { BsMouse } from "react-icons/bs";
+import { FaAward } from "react-icons/fa";
+import { FiUsers } from "react-icons/fi";
+import { VscFolderLibrary } from "react-icons/vsc";
 import {
   Animator,
   batch,
@@ -107,6 +110,28 @@ function App() {
                       modi molestiae natus dignissimos nihil praesentium
                       odit!lorem
                     </p>
+                    <div className="about__cards">
+                      <article className="about__card">
+                        <FaAward className="about__icon" />
+                        <h5>Experience</h5>
+
+                        <small>3+ Years working</small>
+                      </article>
+
+                      <article className="about__card">
+                        <FiUsers className="about__icon" />
+                        <h5>Clients</h5>
+
+                        <small>200_ worldwide</small>
+                      </article>
+
+                      <article className="about__card">
+                        <VscFolderLibrary className="about__icon" />
+                        <h5>Projects</h5>
+
+                        <small>80+ Completed Projects</small>
+                      </article>
+                    </div>
                   </div>
                 </div>
               </Animator>
