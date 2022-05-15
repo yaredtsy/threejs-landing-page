@@ -21,6 +21,7 @@ import {
   ZoomIn,
   ZoomOut,
   StickyIn,
+  Zoom,
 } from "react-scroll-motion";
 import "assets/css/about-us.scss";
 import phoneCase from "assets/images/phone-case.webp";
@@ -110,27 +111,34 @@ function App() {
                       modi molestiae natus dignissimos nihil praesentium
                       odit!lorem
                     </p>
-                    <div className="about__cards">
-                      <article className="about__card">
-                        <FaAward className="about__icon" />
-                        <h5>Experience</h5>
+                    <div
+                      className="about__cards"
+                      style={{ pointerEvents: "auto" }}
+                    >
+                      <Animator animation={MoveIn(-500, 0)}>
+                        <article className="about__card">
+                          <FaAward className="about__icon" />
+                          <h5>Experience</h5>
 
-                        <small>3+ Years working</small>
-                      </article>
+                          <small>3+ Years working</small>
+                        </article>
+                      </Animator>
+                      <Animator animation={Zoom(0, 1)}>
+                        <article className="about__card">
+                          <FiUsers className="about__icon" />
+                          <h5>Clients</h5>
 
-                      <article className="about__card">
-                        <FiUsers className="about__icon" />
-                        <h5>Clients</h5>
+                          <small>200_ worldwide</small>
+                        </article>
+                      </Animator>
+                      <Animator animation={MoveIn(500, 0)}>
+                        <article className="about__card">
+                          <VscFolderLibrary className="about__icon" />
+                          <h5>Projects</h5>
 
-                        <small>200_ worldwide</small>
-                      </article>
-
-                      <article className="about__card">
-                        <VscFolderLibrary className="about__icon" />
-                        <h5>Projects</h5>
-
-                        <small>80+ Completed Projects</small>
-                      </article>
+                          <small>80+ Completed Projects</small>
+                        </article>
+                      </Animator>
                     </div>
                   </div>
                 </div>
