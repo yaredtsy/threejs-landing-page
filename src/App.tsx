@@ -54,53 +54,65 @@ function App() {
         </Animator>
       </ScrollPage>
       <ScrollPage page={1}>
-        <Animator
-          animation={batch(
-            FadeIn(0, 0.95),
+        <div style={{ pointerEvents: "none" }}>
+          <Animator
+            animation={batch(
+              FadeIn(0, 0.95),
 
-            Sticky()
-          )}
-        >
-          <div className="container">
-            <picture>
-              <source srcSet={phoneCase} type="image/webp" />
-              <img src={phoneCase} alt="" className="phone_case" />
-            </picture>
-          </div>
-        </Animator>
+              Sticky()
+            )}
+          >
+            <div className="container">
+              <picture>
+                <source srcSet={phoneCase} type="image/webp" />
+                <img src={phoneCase} alt="" className="phone_case" />
+              </picture>
+            </div>
+          </Animator>
+        </div>
       </ScrollPage>
       <ScrollPage page={2}>
-        <Animator animation={batch(Fade(0, 0.75), Move(), Sticky(50, 40))}>
-          <div className="container">
-            <Animator
-              animation={batch(ZoomIn(0.7, 1), FadeIn(0, 1), FadeOut(1, 0.5))}
-            >
-              <div className="about-us">
-                <div className="content">
-                  <h1 className="title">About Us</h1>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Nesciunt fuga distinctio doloribus obcaecati numquam rerum.
-                    Cupiditate cum esse consequuntur incidunt voluptatum? Vel
-                    laboriosam modi molestiae natus dignissimos nihil
-                    praesentium odit!lorem, Lorem ipsum, dolor sit amet
-                    consectetur adipisicing elit. Nesciunt fuga distinctio
-                    doloribus obcaecati numquam rerum. Cupiditate cum esse
-                    consequuntur incidunt voluptatum? Vel laboriosam modi
-                    molestiae natus dignissimos nihil praesentium odit!lorem
-                  </p>
+        <div style={{ pointerEvents: "none" }}>
+          <Animator animation={batch(Fade(0, 0.75), Move(), Sticky(50, 40))}>
+            <div className="container">
+              <Animator
+                animation={batch(
+                  FadeIn(1, 0.75),
+
+                  Sticky(50, 60)
+                )}
+              >
+                <div className="phone_case_container">
+                  <picture>
+                    <source srcSet={phoneCase} type="image/webp" />
+                    <img src={phoneCase} alt="" className="phone_case" />
+                  </picture>
                 </div>
-              </div>
-            </Animator>
-          </div>
-        </Animator>
-      </ScrollPage>
-      <ScrollPage page={3}>
-        <Animator animation={batch(Fade(), Move(), Sticky())}>
-          <div className="container">
-            <Animator animation={ZoomIn()}>Our Work</Animator>
-          </div>
-        </Animator>
+              </Animator>
+              <Animator
+                animation={batch(ZoomIn(0.7, 1), FadeIn(0, 1), FadeOut(1, 0.5))}
+              >
+                <div className="about-us">
+                  <div className="content">
+                    <h1 className="title">About Us</h1>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Nesciunt fuga distinctio doloribus obcaecati numquam
+                      rerum. Cupiditate cum esse consequuntur incidunt
+                      voluptatum? Vel laboriosam modi molestiae natus
+                      dignissimos nihil praesentium odit!lorem, Lorem ipsum,
+                      dolor sit amet consectetur adipisicing elit. Nesciunt fuga
+                      distinctio doloribus obcaecati numquam rerum. Cupiditate
+                      cum esse consequuntur incidunt voluptatum? Vel laboriosam
+                      modi molestiae natus dignissimos nihil praesentium
+                      odit!lorem
+                    </p>
+                  </div>
+                </div>
+              </Animator>
+            </div>
+          </Animator>
+        </div>
       </ScrollPage>
     </ScrollContainer>
   );
