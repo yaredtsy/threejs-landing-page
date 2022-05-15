@@ -80,7 +80,7 @@ $transition: all 400ms ease;
 @media screen and (max-width: 1024px) {
   .about-us {
     .content {
-      width: 60%;
+      width: 70%;
     }
     .title {
       font-size: 4.25rem;
@@ -95,6 +95,17 @@ $transition: all 400ms ease;
     }
     .title {
       font-size: 3.25rem;
+    }
+  }
+  .about__cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .about__card {
+    padding: 1rem;
+    h5 {
+      margin-block-start: 1em;
+      margin-block-end: 1em;
     }
   }
 }
