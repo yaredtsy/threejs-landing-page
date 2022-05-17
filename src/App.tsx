@@ -1,7 +1,7 @@
 import { Html, useProgress } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import Header from "components/Header";
-import { Suspense } from "react";
+import Header from "components/homepage/Header";
+import { Suspense, useEffect } from "react";
 import { BsMouse } from "react-icons/bs";
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
@@ -24,14 +24,27 @@ import {
   Zoom,
 } from "react-scroll-motion";
 import "assets/css/about-us.scss";
+import "assets/css/exprei.scss";
+
 import phoneCase from "assets/images/phone-case.webp";
+import AboutUs from "components/aboutus/about-us.componets";
+import Skills from "components/expreiencc/skills.componet";
 
 const Loader = () => {
   const { progress } = useProgress();
 
   return (
     <Html>
-      <span style={{ color: "#FFF" }}> {progress} %loaded</span>
+      <div>
+        <div className="percent">
+          <div className="number">
+            <h3>
+              {progress}
+              <span>%</span>
+            </h3>
+          </div>
+        </div>
+      </div>
     </Html>
   );
 };
@@ -77,75 +90,11 @@ function App() {
       </ScrollPage>
       <ScrollPage page={2}>
         <div style={{ pointerEvents: "none" }}>
-          <Animator animation={batch(Fade(0, 0.75), Move(), Sticky(50, 40))}>
-            <div className="container">
-              <Animator
-                animation={batch(
-                  FadeIn(1, 0.75),
-
-                  Sticky(50, 60)
-                )}
-              >
-                <div className="phone_case_container">
-                  <picture>
-                    <source srcSet={phoneCase} type="image/webp" />
-                    <img src={phoneCase} alt="" className="phone_case" />
-                  </picture>
-                </div>
-              </Animator>
-              <Animator
-                animation={batch(ZoomIn(0.7, 1), FadeIn(0, 1), FadeOut(1, 0.5))}
-              >
-                <div className="about-us">
-                  <div className="content">
-                    <h1 className="title">About Us</h1>
-                    <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Nesciunt fuga distinctio doloribus obcaecati numquam
-                      rerum. Cupiditate cum esse consequuntur incidunt
-                      voluptatum? Vel laboriosam modi molestiae natus
-                      dignissimos nihil praesentium odit!lorem, Lorem ipsum,
-                      dolor sit amet consectetur adipisicing elit. Nesciunt fuga
-                      distinctio doloribus obcaecati numquam rerum. Cupiditate
-                      cum esse consequuntur incidunt voluptatum? Vel laboriosam
-                      modi molestiae natus dignissimos nihil praesentium
-                      odit!lorem
-                    </p>
-                    <div
-                      className="about__cards"
-                      style={{ pointerEvents: "auto" }}
-                    >
-                      <Animator animation={MoveIn(-500, 0)}>
-                        <article className="about__card">
-                          <FaAward className="about__icon" />
-                          <h5>Experience</h5>
-
-                          <small>3+ Years working</small>
-                        </article>
-                      </Animator>
-                      <Animator animation={Zoom(0, 1)}>
-                        <article className="about__card">
-                          <FiUsers className="about__icon" />
-                          <h5>Clients</h5>
-
-                          <small>200_ worldwide</small>
-                        </article>
-                      </Animator>
-                      <Animator animation={MoveIn(500, 0)}>
-                        <article className="about__card">
-                          <VscFolderLibrary className="about__icon" />
-                          <h5>Projects</h5>
-
-                          <small>80+ Completed Projects</small>
-                        </article>
-                      </Animator>
-                    </div>
-                  </div>
-                </div>
-              </Animator>
-            </div>
-          </Animator>
+          <AboutUs />
         </div>
+      </ScrollPage>
+      <ScrollPage page={3}>
+        <Skills />
       </ScrollPage>
     </ScrollContainer>
   );

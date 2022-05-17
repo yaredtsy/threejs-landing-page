@@ -12,7 +12,7 @@ $transition: all 400ms ease;
   justify-content: center;
   text-align: center;
 
-  .content {
+  .about-us_content {
     width: 35%;
   }
   .title {
@@ -79,7 +79,7 @@ $transition: all 400ms ease;
 
 @media screen and (max-width: 1024px) {
   .about-us {
-    .content {
+    .about-us_content {
       width: 70%;
     }
     .title {
@@ -90,7 +90,7 @@ $transition: all 400ms ease;
 
 @media screen and (max-width: 600px) {
   .about-us {
-    .content {
+    .about-us_content {
       width: 90%;
     }
     .title {

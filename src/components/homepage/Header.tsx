@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <>
       <group name="sceneContainer" ref={group}>
-        <Octahedron name="background" args={[20, 4]} position={[0, 0, -5]}>
+        <Octahedron name="background" args={[20, 4]} position={[0, 0, -10]}>
           <meshMatcapMaterial
             matcap={matcapTexture}
             side={THREE.BackSide}
