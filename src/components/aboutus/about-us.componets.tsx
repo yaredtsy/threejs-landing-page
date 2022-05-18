@@ -17,20 +17,6 @@ const AboutUs = () => {
   return (
     <Animator animation={batch(FadeIn(0, 0.75), MoveIn(), StickyIn(50, 40))}>
       <div className="container">
-        <Animator
-          animation={batch(
-            FadeIn(1, 0.75),
-
-            StickyIn(50, 60)
-          )}
-        >
-          <div className="phone_case_container">
-            <picture>
-              <source srcSet={phoneCase} type="image/webp" />
-              <img src={phoneCase} alt="" className="phone_case" />
-            </picture>
-          </div>
-        </Animator>
         <Animator animation={batch(ZoomIn(0.7, 1), FadeIn(0, 1))}>
           <div className="about-us">
             <div className="about-us_content ">
@@ -73,6 +59,20 @@ const AboutUs = () => {
                 </Animator>
               </div>
             </div>
+          </div>
+        </Animator>
+        <Animator
+          animation={batch(
+            FadeIn(1, 0.75),
+
+            StickyIn(50, 60)
+          )}
+        >
+          <div className="phone_case_container">
+            <picture>
+              <source srcSet={phoneCase} type="image/webp" />
+              <img src={phoneCase} alt="" className="phone_case" />
+            </picture>
           </div>
         </Animator>
       </div>

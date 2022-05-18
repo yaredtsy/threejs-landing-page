@@ -13,6 +13,8 @@ $transition: all 400ms ease;
   text-align: center;
 
   .about-us_content {
+    position: relative;
+    z-index: 2;
     width: 35%;
   }
   .title {
