@@ -4,6 +4,7 @@ import {
   batch,
   FadeIn,
   MoveIn,
+  Sticky,
   StickyIn,
   ZoomIn,
 } from "react-scroll-motion";
@@ -15,7 +16,7 @@ import { VscFolderLibrary } from "react-icons/vsc";
 
 const AboutUs = () => {
   return (
-    <Animator animation={batch(FadeIn(0, 0.75), MoveIn(), StickyIn(50, 40))}>
+    <Animator animation={batch(FadeIn(0, 0.75), MoveIn(), Sticky(50, 40))}>
       <div className="container">
         <Animator animation={batch(ZoomIn(0.7, 1), FadeIn(0, 1))}>
           <div className="about-us">
